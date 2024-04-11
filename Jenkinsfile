@@ -1,10 +1,12 @@
 pipeline {
-    agent ('docker')
+    agent {
+            docker
+    }
 
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello World'
+                sh "docker ps"
             }
         }
     }
